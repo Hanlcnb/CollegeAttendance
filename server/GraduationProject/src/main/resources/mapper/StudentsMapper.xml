@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hanlc.graduationproject.mapper.StudentsMapper">
+
+    <!-- 根据id查询学生信息 -->
+    <select id="selectStudentInfoById" resultType="com.hanlc.graduationproject.entity.domain.Students">
+        SELECT student_number, department, major
+        FROM students
+        WHERE id = #{id}
+    </select>
+
+</mapper>
