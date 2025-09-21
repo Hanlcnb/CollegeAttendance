@@ -1,0 +1,16 @@
+<view class="basic-container">
+  <!--基本信息区域-->
+  <view class="avatar-container">
+    <image class="avatar" src="{{user.avatar}}"
+    bind:tap="changeAvatar"></image>
+  </view>
+  <view class="info-container">
+    <text class="info-item">{{user.realName}}</text>
+  </view>
+</view>
+<view class="item-container">
+  <!--各类功能的导航栏区域-->
+  <van-cell-group inset >
+    <van-cell wx:for="{{cellItems}}" wx:key="index" title="{{item.name}}" is-link bind:tap="toItemsPath" data-path="{{item.toPath}}"></van-cell>
+  </van-cell-group>
+</view>

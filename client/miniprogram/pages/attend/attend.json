@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "verify-face": "/components/verifyFace/verifyFace",
+    "t-overlay": "tdesign-miniprogram/overlay/overlay"
+  },
+  "navigationBarTitleText": "课程签到"
+}

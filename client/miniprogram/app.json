@@ -1,0 +1,58 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/notice/notice",
+    "pages/profile/profile",
+    "pages/message/message",
+    "pages/attend/attend",
+    "pages/publishattend/publishattend",
+    "pages/userinfo/userinfo",
+    "pages/attendance/attendance",
+    "pages/settings/settings",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "课堂考勤小程序",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "通知",
+        "iconPath": "images/tabbar/message-comments.png",
+        "selectedIconPath": "images/tabbar/message-comments-fill.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile_selected.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取用户位置进行签到"
+    }
+  }
+}

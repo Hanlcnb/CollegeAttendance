@@ -1,0 +1,52 @@
+.container {
+  padding: 20rpx;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+.filter-section {
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+}
+
+.record-list {
+  margin-bottom: 20rpx;
+}
+
+.record-item {
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.record-detail {
+  padding: 0 20rpx;
+}
+
+/* 考勤状态样式 */
+.status-present {
+  color: #07c160 !important;
+}
+
+.status-absent {
+  color: #ee0a24 !important;
+}
+
+.status-late {
+  color: #ff976a !important;
+}
+
+.status-leave {
+  color: #1989fa !important;
+}
+
+.empty-state {
+  padding: 100rpx 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+}

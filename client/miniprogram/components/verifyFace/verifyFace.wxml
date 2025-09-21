@@ -1,0 +1,5 @@
+<camera class="camera" style="height: {{height}}px ; width: {{width}}px;">
+  <cover-view class="btn-view">
+    <cover-image class="btn-box" bind:tap="photoCapture" src="/images/icon/scan.png"></cover-image>
+  </cover-view>
+</camera>

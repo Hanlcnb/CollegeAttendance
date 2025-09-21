@@ -1,0 +1,58 @@
+<!--签到页面,支持多种签到方式-->
+<t-overlay
+visible="{{overlayVisible}}"
+duration="{{overlayDuration}}"
+prevent-scroll-through="true"
+bind:click="handleOverlayClick">
+  <view>不在签到范围内</view>
+</t-overlay>
+<view class="container">
+  <view class="header">
+    <view class="title">{{attend.title}}</view>
+    <view class="subtitle">{{currentTime}}</view>
+  </view>
+
+  <!-- 二维码签到 -->
+  <view class="sign-section" wx:if="{{attend.method === 'QR'}}">
+    <view class="qr-code-section">
+      <view class="qr-code-container">
+        <image class="qr-code" src="{{qrCodeUrl}}" mode="aspectFit"></image>
+      </view>
+      <view class="qr-code-tip">请扫描二维码进行签到</view>
+    </view>
+  </view>
+
+  <!-- 手势签到 -->
+  <view class="sign-section" wx:if="{{attend.method === 'GESTURE'}}">
+    <view class="gesture-section">
+      <view class="gesture-pad">
+        <view class="gesture-point" wx:for="{{9}}" wx:key="*this" 
+              data-index="{{index}}"
+              bindtouchstart="onTouchStart"
+              bindtouchmove="onTouchMove"
+              bindtouchend="onTouchEnd">
+        </view>
+      </view>
+      <view class="gesture-tip">请绘制签到手势</view>
+      <view class="gesture-status" wx:if="{{gestureStatus}}">
+        {{gestureStatus}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 密码签到 -->
+  <view class="sign-section" wx:if="{{attend.method === 'PASSWORD'}}">
+    <view class="password-section">
+      <input class="password-input" type="password" placeholder="请输入签到密码" value="{{password}}" bindinput="onPasswordInput"/>
+      <button class="btn submit" bindtap="submitPassword">提交</button>
+      <view class="password-status" wx:if="{{passwordStatus}}">
+        {{passwordStatus}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 人脸识别签到 -->
+  <view class="sign-section" wx:if="{{attend.method === 'FACE'}}">
+    <verify-face></verify-face>
+  </view>
+</view>

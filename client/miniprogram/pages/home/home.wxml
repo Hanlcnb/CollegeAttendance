@@ -1,0 +1,149 @@
+<wxs module="utils" src="/components/schedule/schedule.wxs"></wxs>
+<scroll-view>
+  <!--轮播图-->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" 
+    interval="3000" duration="1000" circular="true">
+    <swiper-item wx:for="{{swiperItems}}" wx:key="index">
+      <image src="{{item.imageUrl}}" mode="scaleToFill" class="swiper-image"></image>
+    </swiper-item>
+  </swiper>
+  <!--课程表-->
+  <view class="course-table">
+    <view class="schedule-container">
+
+      <view class="content">
+        <text>{{nowWeeks}}</text>
+        <t-icon name="chevron-down" size="24rpx" bind:click="pickNowWeeks" />
+        <t-picker
+          visible="{{pickerVisible}}"
+          value="{{pickerValue}}"
+          data-key="city2"
+          title="{{pickerTitle}}"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onPickerChange"
+          bindcancel="onPickerCancel"
+        >
+          <t-picker-item options="{{weekDays}}"></t-picker-item>
+        </t-picker>
+      </view>
+
+      <view class="week-list">
+        <view class="blank"></view>
+        <view class="week-item" wx:for="{{7}}" wx:key="*this">
+         <text class="week-name">周{{index+1}}</text>
+         <text class="week-date">{{index+1}}日</text>
+        </view>
+      </view>
+
+      <view class="course-content">
+        <view class="course-nums">
+          <view class="course-num" wx:for="{{12}}" wx:key="*this">
+            {{index+1 > 9 ? index+1 : '0'+(index+1)}}
+          </view>
+        </view>
+        <view class="course-list">
+          <view class="course-item" wx:for="{{courseList}}" wx:key="key"
+          style="height: {{item.sectionCount*120}}rpx;top:{{(item.section-1)*120}}rpx;left:{{(windowWidth*2-50)/7*(item.weekDay-1)}}rpx"
+          bind:tap="editCourse" data-course="{{item}}">
+            <view class="course-item_content" style="background-color: {{item.color}};">
+              {{item.name}}@{{item.location}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 悬浮扫码按钮 -->
+<view class="float-button" bind:tap="scanQRCode">
+  <van-icon name="scan" size="24px" color="#fff" />
+</view>
+
+<!-- 课程编辑弹窗 -->
+<t-popup
+  visible="{{editDialogVisible}}"
+  placement="center"
+  bind:visible-change="onEditDialogVisibleChange"
+>
+  <view class="edit-course-popup">
+    <view class="popup-header">
+      <text class="popup-title">编辑课程信息</text>
+      <t-icon name="close" size="40rpx" bind:tap="cancelCourseEdit" />
+    </view>
+    
+    <view class="edit-course-form">
+      <view class="form-item">
+        <text class="form-label">课程名称：</text>
+        <input class="form-input" value="{{editingCourse.name}}" bind:input="onCourseNameInput" placeholder="请输入课程名称" />
+      </view>
+      <view class="form-item">
+        <text class="form-label">上课地点：</text>
+        <input class="form-input" value="{{editingCourse.location}}" bind:input="onCourseLocationInput" placeholder="请输入上课地点" />
+      </view>
+      <view class="form-item">
+        <text class="form-label">星期：</text>
+        <t-picker
+          visible="{{weekPickerVisible}}"
+          value="{{weekPickerValue}}"
+          data-key="week"
+          title="选择星期"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onWeekChange"
+          bindcancel="onWeekPickerCancel"
+        >
+          <t-picker-item options="{{weekOptions}}"></t-picker-item>
+        </t-picker>
+        <view class="picker-trigger" bind:tap="showWeekPicker">
+          <text>{{weekOptions[editingCourse.weekDay - 1] ? weekOptions[editingCourse.weekDay - 1].label : '请选择星期'}}</text>
+          <t-icon name="chevron-down" size="20rpx" />
+        </view>
+      </view>
+      <view class="form-item">
+        <text class="form-label">节次：</text>
+        <t-picker
+          visible="{{sectionPickerVisible}}"
+          value="{{sectionPickerValue}}"
+          data-key="section"
+          title="选择节次"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onSectionChange"
+          bindcancel="onSectionPickerCancel"
+        >
+          <t-picker-item options="{{sectionOptions}}"></t-picker-item>
+        </t-picker>
+        <view class="picker-trigger" bind:tap="showSectionPicker">
+          <text>{{sectionOptions[editingCourse.section - 1] ? sectionOptions[editingCourse.section - 1].label : '请选择节次'}}</text>
+          <t-icon name="chevron-down" size="20rpx" />
+        </view>
+      </view>
+      <view class="form-item">
+        <text class="form-label">持续节数：</text>
+        <t-picker
+          visible="{{durationPickerVisible}}"
+          value="{{durationPickerValue}}"
+          data-key="duration"
+          title="选择持续节数"
+          cancelBtn="取消"
+          confirmBtn="确认"
+          bindchange="onDurationChange"
+          bindcancel="onDurationPickerCancel"
+        >
+          <t-picker-item options="{{durationOptions}}"></t-picker-item>
+        </t-picker>
+        <view class="picker-trigger" bind:tap="showDurationPicker">
+          <text>{{durationOptions[editingCourse.sectionCount - 1] ? durationOptions[editingCourse.sectionCount - 1].label : '请选择持续节数'}}</text>
+          <t-icon name="chevron-down" size="20rpx" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="popup-footer">
+      <button class="cancel-btn" bind:tap="cancelCourseEdit">取消</button>
+      <button class="confirm-btn" bind:tap="saveCourseEdit">保存</button>
+    </view>
+  </view>
+</t-popup>

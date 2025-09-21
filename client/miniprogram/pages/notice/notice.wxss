@@ -1,0 +1,80 @@
+.notice-container {
+  padding: 20rpx;
+  background-color: #ffffff; /* 背景颜色 */
+}
+
+.notice-title {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.notice-list {
+  margin-bottom: 20rpx;
+}
+
+.notice-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.item-left {
+  margin-right: 20rpx;
+}
+
+.course-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.item-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0; /* 防止flex子项溢出 */
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 12rpx;
+}
+
+.course-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.notice-content {
+  font-size: 24rpx;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8rpx;
+}
+
+.item-right {
+  margin-left: 20rpx;
+  display: flex;
+  align-items: flex-start;
+}
+
+.notice-date {
+  font-size: 20rpx;
+  color: #999;
+  white-space: nowrap;
+}

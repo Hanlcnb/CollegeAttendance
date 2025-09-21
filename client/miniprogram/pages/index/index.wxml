@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="screen">
+      <button class="btnChangeMethod" bind:tap="changeLoginMethod">
+        <image src="../../images/icon/sync.png" mode="aspectFill" class="btn-image"/>
+      </button>
+      <view class="screen__content">
+        <block wx:if="{{loginMethod === 'button'}}">
+          <view class="wechat-login-container">
+            <button class="avatar-wrapper" open-type="agreePrivacyAuthorization" bind:tap="Login">
+              <image class="avatar" src="{{defaultAvatar}}"></image>
+            </button>
+          </view>
+        </block>
+        <block wx:if="{{loginMethod === 'input'}}">
+          <block wx:if="{{!showForgotPassword && !showRegister}}">
+            <form class="login">
+              <view class="login__field">
+                <t-icon name="user" size="48rpx"></t-icon>
+                <input type="text" class="login__input" placeholder="用户名或邮箱" value="{{inputUsername}}" bind:input="onUsernameInput"/>
+              </view>
+              <view class="login__field">
+                <t-icon name="lock-on" size="48rpx"></t-icon>
+                <input type="text" class="login__input" password placeholder="密码" value="{{inputPassword}}" bind:input="onPasswordInput"/>
+              </view>
+              <button class="button login__submit" form-type="submit" bind:tap="verity">登录</button>
+              
+              <view class="login__options">
+                <text class="login__link" bind:tap="showForgotPassword">忘记密码？</text>
+                <text class="login__link" bind:tap="showRegister">注册账号</text>
+              </view>
+            </form>
+          </block>
+          <block wx:if="{{showForgotPassword}}">
+            <form class="login">
+              <view class="login__title">找回密码</view>
+              <view class="login__field">
+                <t-icon name="mail" size="48rpx"></t-icon>
+                <input type="text" class="login__input" placeholder="请输入注册邮箱" value="{{inputEmail}}" bind:input="onEmailInput"/>
+              </view>
+              <button class="button login__submit" bind:tap="handleForgotPassword">
+                <span class="button__text">重置密码</span>
+              </button>
+              <view class="login__options">
+                <text class="login__link" bind:tap="backToLogin">返回登录</text>
+              </view>
+            </form>
+          </block>
+          <block wx:if="{{showRegister}}">
+            <form class="login">
+              <view class="login__title">注册账号</view>
+              <view class="login__field">
+                <t-icon name="user" size="48rpx"></t-icon>
+                <input type="text" class="login__input" placeholder="请输入用户名" value="{{registerUsername}}" bind:input="onRegisterUsernameInput"/>
+              </view>
+              <view class="login__field">
+                <t-icon name="mail" size="48rpx"></t-icon>
+                <input type="text" class="login__input" placeholder="请输入邮箱" value="{{registerEmail}}" bind:input="onRegisterEmailInput"/>
+              </view>
+              <view class="login__field">
+                <t-icon name="lock-on" size="48rpx"></t-icon>
+                <input type="password" class="login__input" placeholder="请输入密码" value="{{registerPassword}}" bind:input="onRegisterPasswordInput"/>
+              </view>
+              <view class="login__field">
+                <t-icon name="lock-on" size="48rpx"></t-icon>
+                <input type="password" class="login__input" placeholder="请确认密码" value="{{confirmPassword}}" bind:input="onConfirmPasswordInput"/>
+              </view>
+              <button class="button login__submit" bind:tap="handleRegister">
+                <span class="button__text">注册</span>
+              </button>
+              <view class="login__options">
+                <text class="login__link" bind:tap="backToLogin">返回登录</text>
+              </view>
+            </form>
+          </block>
+        </block>
+      </view>
+    </view>
+  </view>
+</scroll-view>

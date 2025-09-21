@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="form-container">
+    <view class="form-item">
+      <text class="label">课程名称</text>
+      <input class="input" placeholder="请输入课程名称" value="{{courseName}}" bindinput="onCourseNameInput"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">上课地点</text>
+      <input class="input" placeholder="请输入上课地点" value="{{location}}" bindinput="onLocationInput"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">签到时间</text>
+      <picker mode="time" value="{{signTime}}" bindchange="onTimeChange">
+        <view class="picker">{{signTime || '请选择签到时间'}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">签到方式</text>
+      <radio-group class="radio-group" bindchange="onSignTypeChange">
+        <label class="radio" wx:for="{{signTypes}}" wx:key="value">
+          <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="form-item" wx:if="{{signType === 'location'}}">
+      <text class="label">签到范围(米)</text>
+      <input class="input" type="number" placeholder="请输入签到范围" value="{{signRange}}" bindinput="onRangeInput"/>
+    </view>
+
+    <view class="form-item" wx:if="{{signType === 'face'}}">
+      <text class="label">人脸识别</text>
+      <image wx:if="{{faceImage}}" class="preview-image" src="{{faceImage}}" mode="aspectFit"></image>
+    </view>
+
+    <view class="form-item" wx:if="{{signType === 'qr'}}">
+      <text class="label">二维码有效期(分钟)</text>
+      <input class="input" type="number" placeholder="请输入二维码有效期" value="{{qrDuration}}" bindinput="onQRDurationInput"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">签到说明</text>
+      <textarea class="textarea" placeholder="请输入签到说明" value="{{description}}" bindinput="onDescriptionInput"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">签到时长(分钟)</text>
+      <input class="input" type="number" placeholder="请输入签到时长" value="{{duration}}" bindinput="onDurationInput"/>
+    </view>
+
+  </view>
+
+  <view class="button-group">
+    <button class="btn submit" bindtap="submitForm">发布签到</button>
+    <button class="btn cancel" bindtap="cancelForm">取消</button>
+  </view>
+</view> 

@@ -1,0 +1,132 @@
+2025-09-22T00:00:20.225+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:00:50.229+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:01:20.237+08:00  WARN 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 客户端 /[0:0:0:0:0:0:0:1]:14740 已经 30 秒没有发送心跳
+2025-09-22T00:01:20.240+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:01:50.248+08:00  WARN 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 客户端 /[0:0:0:0:0:0:0:1]:14740 已经 30 秒没有发送心跳
+2025-09-22T00:01:50.250+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:01:58.262+08:00  INFO 237560 --- [Attendence] [http-nio-8080-exec-8] c.h.attendence.config.AuthInterceptor    : Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:01:58.263+08:00 DEBUG 237560 --- [Attendence] [http-nio-8080-exec-8] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2025-09-22T00:02:03.863+08:00  INFO 237560 --- [Attendence] [http-nio-8080-exec-6] c.h.attendence.config.AuthInterceptor    : Header: BearereyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:02:20.257+08:00  WARN 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 客户端 /[0:0:0:0:0:0:0:1]:14740 已经 30 秒没有发送心跳
+2025-09-22T00:02:24.198+08:00  INFO 237560 --- [Attendence] [http-nio-8080-exec-10] c.h.attendence.config.AuthInterceptor    : Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:02:24.201+08:00 DEBUG 237560 --- [Attendence] [http-nio-8080-exec-10] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2025-09-22T00:02:27.653+08:00  INFO 237560 --- [Attendence] [http-nio-8080-exec-1] c.h.attendence.config.AuthInterceptor    : Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:02:27.814+08:00  INFO 237560 --- [Attendence] [http-nio-8080-exec-1] c.h.a.controller.UploadFileController    : GYlzNljvJpx9499d25068ca78d8ff36f401462fcbca0.png
+2025-09-22T00:02:27.821+08:00 ERROR 237560 --- [Attendence] [http-nio-8080-exec-1] c.h.a.controller.UploadFileController    : 图片上传失败
+
+java.util.MissingFormatArgumentException: Format specifier '%s'
+	at java.base/java.util.Formatter.format(Formatter.java:2790) ~[na:na]
+	at java.base/java.util.Formatter.format(Formatter.java:2728) ~[na:na]
+	at java.base/java.lang.String.format(String.java:4390) ~[na:na]
+	at com.hanlc.attendence.controller.UploadFileController.uploadImage(UploadFileController.java:62) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.4.jar:6.1.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.4.jar:6.1.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-09-22T00:02:27.839+08:00  INFO 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.a.netty.WebSocketFrameHandler        : 我来看看服务器接收到的是什么消息： {"senderId":"U813570619","receiverId":"","courseId":"11","content":"{\"code\":500,\"message\":\"上传失败: Format specifier '%s'\",\"data\":null,\"timestamp\":1758470547821}","type":"image","isRead":false,"createdAt":"2025-09-21T16:02:27.000Z"}
+2025-09-22T00:02:57.536+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:03:27.540+08:00  WARN 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 客户端 /[0:0:0:0:0:0:0:1]:14740 已经 30 秒没有发送心跳
+2025-09-22T00:03:27.543+08:00 DEBUG 237560 --- [Attendence] [nioEventLoopGroup-3-3] c.h.attendence.netty.HeartbeatHandler    : 收到客户端 /[0:0:0:0:0:0:0:1]:14740 的心跳包
+2025-09-22T00:05:45.788+08:00  INFO 250904 --- [Attendence] [main] c.h.attendence.AttendenceApplication     : Starting AttendenceApplication using Java 21.0.2 with PID 250904 (D:\workspace\GP\GraduationProject\target\classes started by Hanlcnb in D:\workspace\GP\GraduationProject)
+2025-09-22T00:05:45.789+08:00 DEBUG 250904 --- [Attendence] [main] c.h.attendence.AttendenceApplication     : Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-09-22T00:05:45.790+08:00  INFO 250904 --- [Attendence] [main] c.h.attendence.AttendenceApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-22T00:05:46.402+08:00  INFO 250904 --- [Attendence] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-22T00:05:46.404+08:00  INFO 250904 --- [Attendence] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-22T00:05:46.435+08:00  INFO 250904 --- [Attendence] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\CheckInRecordsMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\CheckInTasksMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\ClassesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\CourseSchedulesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\CoursesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\MessagesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\StudentCoursesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\StudentsMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\TeacherCoursesMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\TeachersMapper.class]
+2025-09-22T00:05:46.518+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [D:\workspace\GP\GraduationProject\target\classes\com\hanlc\attendence\mapper\UsersMapper.class]
+2025-09-22T00:05:46.519+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'checkInRecordsMapper' and 'com.hanlc.attendence.mapper.CheckInRecordsMapper' mapperInterface
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'checkInRecordsMapper'.
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'checkInTasksMapper' and 'com.hanlc.attendence.mapper.CheckInTasksMapper' mapperInterface
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'checkInTasksMapper'.
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'classesMapper' and 'com.hanlc.attendence.mapper.ClassesMapper' mapperInterface
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'classesMapper'.
+2025-09-22T00:05:46.521+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'courseSchedulesMapper' and 'com.hanlc.attendence.mapper.CourseSchedulesMapper' mapperInterface
+2025-09-22T00:05:46.523+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'courseSchedulesMapper'.
+2025-09-22T00:05:46.523+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'coursesMapper' and 'com.hanlc.attendence.mapper.CoursesMapper' mapperInterface
+2025-09-22T00:05:46.523+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'coursesMapper'.
+2025-09-22T00:05:46.523+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'messagesMapper' and 'com.hanlc.attendence.mapper.MessagesMapper' mapperInterface
+2025-09-22T00:05:46.524+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'messagesMapper'.
+2025-09-22T00:05:46.524+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'studentCoursesMapper' and 'com.hanlc.attendence.mapper.StudentCoursesMapper' mapperInterface
+2025-09-22T00:05:46.524+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'studentCoursesMapper'.
+2025-09-22T00:05:46.524+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'studentsMapper' and 'com.hanlc.attendence.mapper.StudentsMapper' mapperInterface
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'studentsMapper'.
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'teacherCoursesMapper' and 'com.hanlc.attendence.mapper.TeacherCoursesMapper' mapperInterface
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'teacherCoursesMapper'.
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'teachersMapper' and 'com.hanlc.attendence.mapper.TeachersMapper' mapperInterface
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'teachersMapper'.
+2025-09-22T00:05:46.525+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'usersMapper' and 'com.hanlc.attendence.mapper.UsersMapper' mapperInterface
+2025-09-22T00:05:46.526+08:00 DEBUG 250904 --- [Attendence] [main] o.m.s.mapper.ClassPathMapperScanner      : Enabling autowire by type for MapperFactoryBean with name 'usersMapper'.
+2025-09-22T00:05:46.942+08:00  INFO 250904 --- [Attendence] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-22T00:05:46.952+08:00  INFO 250904 --- [Attendence] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-22T00:05:46.952+08:00  INFO 250904 --- [Attendence] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-09-22T00:05:47.061+08:00  INFO 250904 --- [Attendence] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-22T00:05:47.061+08:00  INFO 250904 --- [Attendence] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1233 ms
+2025-09-22T00:05:47.456+08:00 ERROR 250904 --- [Attendence] [main] c.b.m.core.MybatisConfiguration          : mapper[com.hanlc.attendence.mapper.StudentsMapper.selectStudentInfoById] is ignored, because it exists, maybe from xml file
+2025-09-22T00:05:48.051+08:00  INFO 250904 --- [Attendence] [netty-websocket-server] c.h.attendence.netty.WebSocketServer     : WebSocket服务器启动成功，监听端口：8888
+2025-09-22T00:05:48.511+08:00  INFO 250904 --- [Attendence] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-09-22T00:05:48.518+08:00  INFO 250904 --- [Attendence] [main] c.h.attendence.AttendenceApplication     : Started AttendenceApplication in 3.098 seconds (process running for 3.916)
+2025-09-22T00:05:54.990+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-22T00:05:54.990+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-22T00:05:54.991+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-22T00:05:55.009+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] c.h.attendence.config.AuthInterceptor    : Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:05:55.132+08:00 DEBUG 250904 --- [Attendence] [http-nio-8080-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2025-09-22T00:05:55.133+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-22T00:05:55.274+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f3207c6
+2025-09-22T00:05:55.274+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-22T00:05:59.796+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-2] c.h.attendence.config.AuthInterceptor    : Header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3R1ZGVudCIsIm9wZW5JZCI6Im9ic1cyNjZIOXFDQ1hVdEVzY0FrOVdBUnNJRW8iLCJzdWIiOiJVODEzNTcwNjE5IiwiaWF0IjoxNzU4NDY1MTAzLCJleHAiOjE3NjEwNTcxMDN9.FFxGEM78vpem0bxylleQOBEJUsWvhh-aWHnYoEer4Gw
+2025-09-22T00:05:59.911+08:00  INFO 250904 --- [Attendence] [http-nio-8080-exec-2] c.h.a.controller.UploadFileController    : V25FILTq2w3D499d25068ca78d8ff36f401462fcbca0.png

@@ -1,0 +1,59 @@
+<!--pages/chat/chat.wxml-->
+<wxs src="./chat.wxs" module="utils" />
+<t-navbar class="nav-bar" title="{{courseName}}" left-arrow/>
+
+<view class="chat-container">
+  <scroll-view class="content" scroll-y scroll-into-view="{{ anchor }}">
+    <view class="messages">
+      <block wx:for="{{ messages}}" wx:key="index">
+        <!--时间栏-->
+        <view wx:if="{{index === 0 || item.time - messages[index-1] > 12000}}" class="time">
+          {{ utils.formatTime(item.time) }}
+        </view>
+        <!--消息区-->
+        <!--我的消息-->
+        <view wx:if="{{item.from === 0}}" class="message-area">
+          <view class="message-self">
+            <text space="nbsp">{{item.content}}</text>
+            <t-loading
+              wx:if="{{item.messageId === null}}"
+              t-class="loading"
+              theme="spinner"
+              size="32rpx"
+              class="wrapper"
+            />
+          </view>
+          <t-avatar image="{{myavatar}}" size="small"></t-avatar>
+        </view>
+        <!--对方的消息-->
+        <view wx:if="{{item.from === 1}}" class="message-area">
+          <t-avatar image="../images/avatar/cat.jpg" size="small"></t-avatar>
+          <view class="message-other">
+            <text space="nbsp">{{item.content}}</text>
+          </view>
+        </view>
+      </block>
+      <view id="bottom" />
+    </view>
+  </scroll-view>
+</view>
+
+<view class="block" style="margin-bottom: {{ keyboardHeight }} px;"/>
+<view class="bottom" style="margin-bottom: {{ keyboardHeight }} px;">
+  <view class="input">
+    <input
+      value="{{input}}"
+      type="text"
+      confirm-hold="send"
+      placeholder="请输入"
+      placeholder-style="color: #00000066"
+      hold-keyboard
+      confirm-hold
+      bindkeyboardheightchange="handleKeyboardHeightChange"
+      bindblur="handleBlur"
+      bindinput="handleInput"
+      bindconfirm="sendMessage"
+    />
+  </view>
+  <t-button class="send" theme="primary" shape="round" wx:if="{{input.length > 0}}" bind:tap="sendMessage">发送</t-button>
+</view>

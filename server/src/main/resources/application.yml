@@ -1,0 +1,11 @@
+
+server:
+  tomcat:
+    max-http-header-size: 64KB
+    max-http-post-size: 10MB
+  max-http-header-size: 64KB
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

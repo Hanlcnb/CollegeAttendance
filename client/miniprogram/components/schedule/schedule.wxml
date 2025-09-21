@@ -1,0 +1,32 @@
+<wxs module="utils" src="./schedule.wxs"></wxs>
+
+<view class="schedule-container">
+
+  <view class="content">
+    <text>第{{nowWeeks}}周</text>
+  </view>
+
+  <view class="week-list">
+    <view class="blank"></view>
+    <view class="week-item" wx:for="{{7}}" wx:key="*this">
+     <text class="week-name">周{{index+1}}</text>
+     <text class="week-date">{{index+1}}日</text>
+    </view>
+  </view>
+
+  <view class="course-content">
+    <view class="course-nums">
+      <view class="course-num" wx:for="{{12}}" wx:key="*this">
+        {{index+1 > 9 ? index+1 : '0'+(index+1)}}
+      </view>
+    </view>
+    <view class="course-list">
+      <view class="course-item" wx:for="{{courseList}}" wx:key="key"
+      style="height: {{item.sectionCount*120}}rpx;top:{{(item.section-1)*120}}rpx;left:{{(windowWidth*2-50)/7*(item.weekDay-1)}}rpx">
+        <view class="course-item_content" style="background-color: {{item.color}};">
+          {{item.name}}@{{item.location}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

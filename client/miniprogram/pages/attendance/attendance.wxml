@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 筛选区域 -->
+  <view class="filter-section">
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ status }}" options="{{ statusOptions }}" bind:change="onStatusChange" />
+      <van-dropdown-item value="{{ dateRange }}" options="{{ dateOptions }}" bind:change="onDateChange" />
+    </van-dropdown-menu>
+  </view>
+
+  <!-- 考勤记录列表 -->
+  <view class="record-list">
+    <van-cell-group wx:for="{{attendanceRecords}}" wx:key="id" inset custom-class="record-item">
+      <van-cell title="{{item.courseName}}" label="{{item.checkInTime}}" value="{{item.status}}" value-class="status-{{item.status}}">
+        <view slot="right-icon" class="record-detail" bind:tap="showDetail" data-id="{{item.id}}">
+          <van-icon name="arrow" />
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+
+  <!-- 空状态展示 -->
+  <view class="empty-state" wx:if="{{attendanceRecords.length === 0}}">
+    <van-empty description="暂无考勤记录" />
+  </view>
+
+  <!-- 加载更多 -->
+  <view class="loading" wx:if="{{loading}}">
+    <van-loading type="spinner" />
+  </view>
+</view>
