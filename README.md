@@ -6,13 +6,18 @@
 
 <table>
      <tr>
-          <td ><center><img src="/photo/index.png>登录页面</td>
+          <td ><center><img src="/photo/index.png">微信授权登录</td>
+          <td ><center><img src="/photo/USPW.png">用户名密码登录</td>
+     </tr>
+               
+     <tr>
+          <td ><center><img src="/photo/home.png">微信授权登录</td>
+          <td ><center><img src="/photo/notice.png">用户名密码登录</td>
      </tr>
 </table>
 
 > 前端部分截图
 
-![](/photo/index.png)<br/>
 <img src="/photo/index.png" width="200" height="500">
 <img src="/photo/USPW.png" width="200" height="500">
 
