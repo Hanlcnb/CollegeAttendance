@@ -4,26 +4,25 @@
 
 用户可以自行修改个人信息，主页部分课程表展示了学生当前时间的课程安排；通知页面类似于社交媒体的消息列表，让用户交流更加便捷；系统实现了多种签到方式供教师选择
 
-<img src="/photo/index.png" width="200" height="100">
+
 登录页面：
 
-![登录页面](/photo/index.png)
-
-![用户名密码登录](/photo/USPW.png)
+<img src="/photo/index.png" width="200" height="500">
+<img src="/photo/USPW.png" width="200" height="500">
 
 首页：
-![首页](/photo/home.png)
+<img src="/photo/home.png" width="200" height="500">
 
 通知：
 
-![通知](/photo/notice.png)
+<img src="/photo/notice.png" width="200" height="500">
 个人：
 
-![个人](/photo/profile.png)
+<img src="/photo/profile.png" width="200" height="500">
 
 聊天页面：
 
-![聊天](/photo/messages.png)
+<img src="/photo/messages.png" width="200" height="500">
 
 签到页面
 
