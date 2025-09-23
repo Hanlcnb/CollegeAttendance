@@ -2,11 +2,32 @@
 
 ### 项目功能：
 
-实现了课堂中教师让学生签到的功能，提供了多种签到方式（密码，手势，二维码和人脸识别）。同时为了方便教师和学生进行联系，本项目具有聊天功能，帮助师生实时沟通。首页中的课程表有利于提醒学生课程安排。
+用户可以自行修改个人信息，主页部分课程表展示了学生当前时间的课程安排；通知页面类似于社交媒体的消息列表，让用户交流更加便捷；系统实现了多种签到方式供教师选择
 
-部分截图：
 
-![{CAC98226-3201-45AD-96D3-C46E664F3633}](C:\Users\Hanlcnb\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip\{CAC98226-3201-45AD-96D3-C46E664F3633}.png)
+
+登录页面：
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_19 拷贝.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_19 拷贝" style="zoom: 67%;" />
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_22.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_22" style="zoom:67%;" />
+
+首页：
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_12.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_12" style="zoom:67%;" />
+
+通知：
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_22.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_22" style="zoom:67%;" />
+个人：
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_29.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_29" style="zoom:67%;" />
+
+聊天页面：
+
+<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_46.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_46" style="zoom:67%;" />
+
+签到页面
 
 
 
@@ -16,15 +37,13 @@
 
 ### 后端：
 
-springboot+redis+netty+mybatis
+Springboot Netty Mybatis , MinIO
 
 ### 数据库：
 
-mysql
+Mysql ，Redis , 
 
 
-
-该系统基本实现考勤签到的功能要求，但要上线实际使用任需完善许多功能。
 
 ### 项目结构：
 
@@ -41,13 +60,15 @@ CollegeAttendance
            |-----utils              //自定义工具
 |----server 服务器
      |-----
+|----bddesign.sql                   //生成数据库
+|----README.md                      //项目简介
 ```
 
 ### 部署步骤：
 
 1. 通过git将代码拷贝到电脑上
-2. 打开微信开发者工具导入server文件夹，将相关小程序配置更改为自己的配置
+2. 打开微信开发者工具导入client文件夹，将相关小程序配置更改为自己的配置
 3. 通过“npm install”安装所有依赖组件库，点击“工具” -> "构建npm"
-4. 打开client文件夹，在allication.properties中将数据库配置更改你的数据库连接。
+4. 打开server文件夹，在allication.properties中将数据库配置更改你的数据库连接。
 5. 打开mysql，导入生成数据库的sql文件。
 6. （可选）本项目后端使用了腾讯云服务，需要开通相关的API。将生成的密钥配置到allication.properties中。
