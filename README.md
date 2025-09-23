@@ -8,24 +8,24 @@
 
 登录页面：
 
-<img src="photo/index" style="zoom: 67%;" />
+![pic](/photo/index.png)
 
-<img src="photo/USPW" style="zoom:67%;" />
+![pic](/photo/USPW.png)
 
 首页：
 
-<img src="photo/home" style="zoom:67%;" />
+![pic](/photo/home.png)
 
 通知：
 
-<img src="photo//notice" style="zoom:67%;" />
+![pic](/photo/notice.png)
 个人：
 
-<img src="photo/profile" style="zoom:67%;" />
+![pic](/photo/profile.png)
 
 聊天页面：
 
-<img src="photo/messages" style="zoom:67%;" />
+![pic](/photo/messages.png)
 
 签到页面
 
