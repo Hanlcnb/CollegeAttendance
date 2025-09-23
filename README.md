@@ -8,24 +8,24 @@
 
 登录页面：
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_19 拷贝.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_19 拷贝" style="zoom: 67%;" />
+<img src="photo/index" style="zoom: 67%;" />
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_22.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_07_22" style="zoom:67%;" />
+<img src="photo/USPW" style="zoom:67%;" />
 
 首页：
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_12.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_12" style="zoom:67%;" />
+<img src="photo/home" style="zoom:67%;" />
 
 通知：
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_22.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_22" style="zoom:67%;" />
+<img src="photo//notice" style="zoom:67%;" />
 个人：
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_29.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_29" style="zoom:67%;" />
+<img src="photo/profile" style="zoom:67%;" />
 
 聊天页面：
 
-<img src="C:\Users\Hanlcnb\Videos\CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_46.png" alt="CollegeAttendance - 微信开发者工具 Stable v1.06.2504030 2025_9_23 16_05_46" style="zoom:67%;" />
+<img src="photo/messages" style="zoom:67%;" />
 
 签到页面
 
