@@ -4,42 +4,28 @@
 
 用户可以自行修改个人信息，主页部分课程表展示了学生当前时间的课程安排；通知页面类似于社交媒体的消息列表，让用户交流更加便捷；系统实现了多种签到方式供教师选择
 
+> 前端部分截图
+
 <table>
      <tr>
-          <td ><center><img src="/photo/index.png">微信授权登录</td>
-          <td ><center><img src="/photo/USPW.png">用户名密码登录</td>
-     </tr>
-               
-     <tr>
-          <td ><center><img src="/photo/home.png">微信授权登录</td>
-          <td ><center><img src="/photo/notice.png">用户名密码登录</td>
+          <td ><center><img src="/photo/index.png"/>微信授权登录</center></td>
+          <td ><center><img src="/photo/USPW.png"/>用户名密码登录</center></td>
      </tr>
 </table>
 
-> 前端部分截图
+<table>
+     <tr>
+          <td ><center><img src="/photo/home.png"/>主页</center></td>
+          <td ><center><img src="/photo/notice.png"/>通知</center></td>
+     </tr>
+</table>
 
-<img src="/photo/index.png" width="200" height="500">
-<img src="/photo/USPW.png" width="200" height="500">
-
-首页：
-
-<img src="/photo/home.png" width="200" height="500">
-
-通知：
-
-<img src="/photo/notice.png" width="200" height="500">
-
-个人：
-
-<img src="/photo/profile.png" width="200" height="500">
-
-聊天页面：
-
-<img src="/photo/messages.png" width="200" height="500">
-
-签到页面
-
-
+<table>
+     <tr>
+          <td ><center><img src="/photo/profile.png"/>个人</center></td>
+          <td ><center><img src="/photo/messages.png"/>聊天页面</center></td>
+     </tr>
+</table>
 
 ### 前端：
 
