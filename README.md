@@ -8,24 +8,23 @@
 
 登录页面：
 
-![pic](/photo/index.png)
+![登录页面](/photo/index.png)
 
-![pic](/photo/USPW.png)
+![用户名密码登录](/photo/USPW.png)
 
 首页：
-
-![pic](/photo/home.png)
+![首页](/photo/home.png)
 
 通知：
 
-![pic](/photo/notice.png)
+![通知](/photo/notice.png)
 个人：
 
-![pic](/photo/profile.png)
+![个人](/photo/profile.png)
 
 聊天页面：
 
-![pic](/photo/messages.png)
+![聊天](/photo/messages.png)
 
 签到页面
 
