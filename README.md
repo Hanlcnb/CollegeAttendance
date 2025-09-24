@@ -46,25 +46,49 @@ Mysql ，Redis ,
 ```
 CollegeAttendance
 |----client 客户端
-     |-----miniprogram
-           |-----components         //组件
-           |-----images             //图片
-           |-----lib        
-           |-----miniprogram_npm    //快速构建npm后生成的文件夹
-           |-----mock               //模拟数据
-           |-----pages              //所有页面
-           |-----utils              //自定义工具
+     |----miniprogram
+          |----components                // 组件（课程日程、刷脸核验等）
+          |----images                    // 图片资源（头像、图标、课程图标、tabbar）
+          |----lib                       // 第三方库（如 math.min.js）
+          |----miniprogram_npm           // 构建生成的 npm 依赖（@vant、tdesign、dayjs 等）
+          |----mock                      // 模拟数据与请求封装
+          |----pages                     // 所有页面（打卡、课程、消息、发布、设置等）
+          |----utils                     // 工具方法与请求封装
+          |----app.ts / app.wxss / app.json
 |----server 服务器
-     |-----
-|----bddesign.sql                   //生成数据库
-|----README.md                      //项目简介
+     |----pom.xml
+     |----miniprogram/utils/websocket.js // 小程序端 WebSocket 辅助
+     |----src
+          |----main
+               |----java
+                    |----com.hanlc.attendence
+                         |----AttendenceApplication.java
+                         |----common                 // 统一返回、人脸识别服务
+                         |----config                 // 拦截器、CORS、JWT、WebSocket、Jackson、Minio 等
+                         |----controller             // 登录、打卡、课程、消息、二维码、上传等接口
+                         |----entity
+                              |----domain            // 实体：用户、课程、班级、考勤记录等
+                              |----enums             // 枚举：打卡方式、消息类型、结果码
+                              |----request           // 请求对象
+                         |----handler                // 全局异常处理
+                         |----mapper                 // MyBatis Mapper 接口
+                         |----model/vo               // 视图对象（如 WxLoginResponse）
+                         |----netty                  // WebSocket 服务与心跳
+                         |----service (+impl)        // 业务服务层
+                         |----utils                  // JwtUtils、RandomUtils 等
+               |----resources
+                    |----mapper                     // *Mapper.xml
+|----README.md                          // 项目简介
 ```
 
 ### 部署步骤：
 
 1. 通过git将代码拷贝到电脑上
-2. 打开微信开发者工具导入client文件夹，将相关小程序配置更改为自己的配置
-3. 通过“npm install”安装所有依赖组件库，点击“工具” -> "构建npm"
-4. 打开server文件夹，在allication.properties中将数据库配置更改你的数据库连接。
-5. 打开mysql，导入生成数据库的sql文件。
-6. （可选）本项目后端使用了腾讯云服务，需要开通相关的API。将生成的密钥配置到allication.properties中。
+```
+git clone https://github.com/Hanlcnb/CollegeAttendance.git
+```
+3. 打开微信开发者工具导入client文件夹，更改project.config.json，其中appid的值要改为自己的小程序appid
+4. 通过“npm install”安装所有依赖组件库，点击“工具” -> "构建npm"
+5. 打开server文件夹，在allication.properties中将带有*的属性修改为个人设置
+6. 打开mysql，导入生成数据库的sql文件。
+7. （可选）本项目后端使用了腾讯云服务，需要开通相关的API。将生成的密钥配置到allication.properties中。
